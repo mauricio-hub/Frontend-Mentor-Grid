@@ -1,0 +1,158 @@
+:root {
+  --violet: hsl(263, 55%, 52%);
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--light-grayish-blue);
+  padding: 20px;
+}
+
+section {
+   margin: 0 auto;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1200px;
+  
+ display: grid;
+ grid-template-columns: 100%;
+  height: auto; 
+}
+
+.card {
+  margin-top: 40px;
+
+  width: 95%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card-info {
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.card-info .card-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.card-img {
+  border: 2px solid var(--light-gray);
+  border-radius: 50%;
+}
+
+.card-header .card-item p {
+  color: var(--white);
+}
+.card-header .card-item span {
+  color: var(--light-gray);
+  font-size: 12px;
+}
+
+
+.card-first-text p {
+  font-size: 20px;
+  color: var(--white);
+  font-weight: bold;
+}
+
+.card-second-text p {
+  color: var(--light-gray);
+}
+
+.violet {
+  background-color: var(--violet);
+}
+
+
+.gray {
+  background-color: var(--dark-grayish-blue);
+}
+.white {
+  background-color: var(--white);
+}
+.dark {
+  background-color: var(--dark-blackish-blue);
+}
+.card .card-info .card-first-text .text-dark {
+  color: var(--dark-blackish-blue);
+}
+.card .card-info .card-header .card-item .text-dark {
+  color: var(--dark-blackish-blue);
+}
+
+.card .card-info .card-header .card-item .gray-span {
+  color: var(--dark-grayish-blue);
+}
+
+
+@media (min-width:900px) {
+  section {
+    margin-top: 120px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width:1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    gap: 20px;    
+  
+  }
+
+  .card {
+    margin:0 auto;
+  
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .card-1{
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .card-3{
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .card-2{
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+
+  .card-4{
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+
+  .card-5{
+    grid-column: 4/5;
+    grid-row: 1/3;
+  }
+
+
+}
+
+footer{
+  margin-top: 40px;
+}
